@@ -21,6 +21,10 @@ body {
   background-color: #276028;
 }
 
+.bg-secondary {
+    background-color: #999;
+}
+
 
 body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
