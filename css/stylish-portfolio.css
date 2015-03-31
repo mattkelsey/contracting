@@ -17,12 +17,13 @@ body {
 }
 
 .bg-primary {
-  color: #F2F2F2;
-  background-color: #276028;
+  color: #CCC;
+  background-color: #104311;
 }
 
 .bg-secondary {
-    background-color: #DDD;
+    background-color: #555;
+    color: #CCC;
 }
 
 .center {
@@ -155,6 +156,10 @@ hr.small {
     -o-background-size: cover;
 }
 
+/* Blurb */
+.blurb {
+    padding: 50px 0;
+}
 /* About */
 
 .about {
