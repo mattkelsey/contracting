@@ -16,13 +16,14 @@ body {
     font-size: 24px;
 }
 
+
 .bg-primary {
   color: #CCC;
-  background-color: #104311;
+  background-color: #321A16;
 }
 
 .bg-secondary {
-    background-color: #555;
+    background-color: #6E534F;
     color: #CCC;
 }
 
@@ -66,7 +67,9 @@ body {
 }
 
 /* Custom Button Styles */
-
+.btn {
+    border-radius: 0;
+}
 .btn-dark {
     border-radius: 0;
     color: #fff;
