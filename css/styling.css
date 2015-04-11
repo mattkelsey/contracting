@@ -10,6 +10,7 @@ html,
 body {
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 }
 
 .bigger-text {
@@ -106,7 +107,10 @@ hr.small {
 
 .navbar-fixed-top {
     padding: 26px 0;
+}
 
+.navbar-collapse {
+    border: none;
 }
 
 .navbar-fixed-top .navbar-brand {
@@ -289,7 +293,9 @@ hr.small {
 .floating-label-form-group-with-focus label {
     color: #18bc9c;
 }
-
+.contact {
+    padding: 50px 0;
+}
 
 /* Footer */
 
