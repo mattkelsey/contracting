@@ -102,7 +102,7 @@
     </section>
 
     <section class="blurb bg-secondary">
-        <a id="blurb" class="offset"></a>
+        <a id="blurb"></a>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -118,7 +118,7 @@
     
     <!-- Services -->
     <section class="services bg-primary">
-        <a id="services" class="offset"></a>
+        <a id="services"></a>
         <div class="container-fluid">
             <div class="row text-center">
                 <div class="col-lg-10 col-lg-offset-1">
@@ -219,7 +219,7 @@
 
     <!-- About -->
     <section class="about bg-secondary">
-        <a id="about" class="offset"></a>
+        <a id="about"></a>
             <div class="container-fluid text-center">
                 <h2>About Us</h2>
                 <hr class="small"> 
@@ -258,7 +258,7 @@
             </div>
             
         </div>
-        <center><p style="color: red" class="bigger-text">The layout isn't perfect here yet, I'm working on it.</p></center>
+        <center><p style="color: red" class="bigger-text">This layout is still in progress it doesn't scale perfectly to mobile devices.</p></center>
     </section>
 
 
@@ -266,7 +266,7 @@
     
     <!-- Portfolio -->
     <section class="portfolio bg-primary">
-    <a class="offset" id="portfolio"></a>
+    <a id="portfolio"></a>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
@@ -320,7 +320,7 @@
     </aside> -->
 
     <section class="contact bg-secondary">
-    <a class="offset" id="contact"></a>
+    <a id="contact"></a>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -460,7 +460,7 @@
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                 if (target.length) {
                     $('html,body').animate({
-                        scrollTop: target.offset().top
+                        scrollTop: target.offset().top-145 //subtract the width of the navbar
                     }, 1000);
                     return false;
                 }
