@@ -40,8 +40,12 @@
             <span class="icon-bar"></span>
         </button>
 
-        <a class="navbar-brand" href="#top">
+        <!-- <a class="navbar-brand" href="#top">
             <img alt="N" src="img/logo_small.png" style="width:80%; height:auto; margin-top:-30%;" class="navbar-brand" id="navbrand">
+        </a> -->
+
+        <a class="navbar-brand" href="#top">
+            <img alt="N" src="img/branding.png" style="width:150%; height:auto; margin-top: -40px" class="navbar-brand" id="navbrand">
         </a>
     </div>
     <div class="collapse navbar-collapse" id="navbar-collapse">
@@ -67,14 +71,19 @@
 </nav>
 
     <!-- Header -->
-    <header id="top" class="header">
-        <div id="headertext" class="text-vertical-center">
-            <h1>Niederberger Contracting</h1>
-            <h3>Quality craftsmanship and thoughtful design.</h3>
-            <br>
-            <a href="#blurb" class="btn btn-dark btn-lg">Find Out More</a>
+    <header id="top" class="header tint">
+        
+        <div class="text-vertical-center">
+            <!-- <h1>Niederberger Contracting</h1> -->
+            <h1 class="text-shadow">Quality craftsmanship and thoughtful design.</h1>
+            <!-- <br> -->
+            <!-- <a href="#blurb" class="btn btn-dark btn-lg">Find Out More</a> -->
+
         </div>
+       
     </header>
+
+
 
     <section class="bg-primary" style="padding-bottom: 50px">
         <div class="container-fluid">    
@@ -230,7 +239,7 @@
                 <div class="row">
                 
                     <div class="col-lg-3">
-                        <img src="img/josh.jpg" style="position:relative; width: 100%;">
+                        <img src="img/josh.jpg" class="about-img">
                                             
                     </div>
                     <div class="col-lg-7">
@@ -242,7 +251,7 @@
                 </div>
                 <div class="row top-padding">
                     <div class="col-lg-3">
-                        <img src="img/seth.jpg" style="position:relative; width: 100%;">
+                        <img src="img/seth.jpg" class="about-img">
                                  
                     </div>
                     <div class="col-lg-7">
@@ -426,9 +435,13 @@
     <!-- Mail JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
+    
+    <!-- Backstretch (for slideshow) -->
+    <script src="js/backstretch.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script>
+
     // Closes the sidebar menu
     $("#menu-close").click(function(e) {
         e.preventDefault();
@@ -462,6 +475,34 @@
             }
         });
     });
+
+    
+    $(".header").backstretch([
+      "img/home_waterfall.jpg"
+    , "img/home_commercial.jpg"
+    , "img/bg.jpg"
+  ], {duration: 5000, fade: 1000});
+
+
+    // //Array of images which you want to show: Use path you want.
+    // var images = new Array('img/home_waterfall.jpg','img/bg.jpg','img/home_commercial.jpg');
+    // var nextimage = 0;
+    // slide();
+
+    // function slide(){
+    //     //console.log('Slide function has run');
+    //     if(nextimage >= images.length) {
+    //         nextimage = 0;
+    //     }
+    //     //console.log('url('+images[nextimage++]+') no-repeat center center scroll;');
+    //     $('.header')
+    //     .css('background-image','url("'+images[nextimage++]+'")')
+    //     .fadeIn(500,function(){
+    //         //console.log('sliding');
+    //         setTimeout(slide,5000);
+    //     });
+    // }
+
 
     $("#scheme1").on( "click", function() {
         $('.bg-primary').css( "background-color", "#104311" );
