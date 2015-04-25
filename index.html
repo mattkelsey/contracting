@@ -476,11 +476,26 @@
         });
     });
 
-    
+document.domain = "mkindustries.net"
+function getFiles(){
+    $.ajax({
+      url: "http://mkindustries.net/contracting/img/slideshow",
+      success: function(data){
+         $(data).find("td > a").each(function(){ 
+            console.log("Found a file: " + $(this).attr("href"));
+         });
+      }
+    });
+}
+
+getFiles();
+
     $(".header").backstretch([
-      "img/home_waterfall.jpg"
-    , "img/home_commercial.jpg"
-    , "img/bg.jpg"
+      "img/slideshow/BittnerBedroom.jpg",
+      "img/slideshow/BittnerDining1.jpg",
+      "img/slideshow/BittnerUpstairshall.jpg",
+      "img/slideshow/BittnerExterior1.jpg"
+
   ], {duration: 5000, fade: 1000});
 
 
@@ -504,8 +519,15 @@
     // }
 
 
+    // $("#scheme1").on( "click", function() {
+    //     $('.bg-primary').css( "background-color", "#104311" );
+    //     $('.bg-primary').css( "color", "#CCC" );
+
+    //     $('.bg-secondary').css( "background-color", "#555" );
+    //     $('.bg-secondary').css( "color", "#CCC" );
+    // });
     $("#scheme1").on( "click", function() {
-        $('.bg-primary').css( "background-color", "#104311" );
+        $('.bg-primary').css( "background-color", "#666" );
         $('.bg-primary').css( "color", "#CCC" );
 
         $('.bg-secondary').css( "background-color", "#555" );
