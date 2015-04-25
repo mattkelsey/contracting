@@ -88,25 +88,46 @@
     <section class="bg-primary" style="padding-bottom: 50px">
         <div class="container-fluid">    
             <div class="row">    
-                <div class="col-lg-2 top-padding">
+                <div class="col-xs-6 col-md-2 top-padding">
                     <button class="btn btn-dark btn-block" style="padding:3vh" id="scheme1">Scheme 1</button>
                 </div>
-                <div class="col-lg-2 top-padding">
+                <div class="col-xs-6 col-md-2 top-padding">
                     <button class="btn btn-dark btn-block" style="padding:3vh" id="scheme2">Scheme 2</button>
                 </div>
-                <div class="col-lg-2 top-padding">
+                <div class="col-xs-6 col-md-2 top-padding">
                     <button class="btn btn-dark btn-block" style="padding:3vh" id="scheme3">Scheme 3</button>
                 </div>
-                <div class="col-lg-2 top-padding">
+                <div class="col-xs-6 col-md-2 top-padding">
                     <button class="btn btn-dark btn-block" style="padding:3vh" id="scheme4">Scheme 4</button>
                 </div>
-                <div class="col-lg-2 top-padding">
+                <div class="col-xs-6 col-md-2 top-padding">
                     <button class="btn btn-dark btn-block" style="padding:3vh" id="scheme5">Scheme 5</button>
                 </div>
-                <div class="col-lg-2 top-padding">
+                <div class="col-xs-6 col-md-2 top-padding">
                     <button class="btn btn-dark btn-block" style="padding:3vh" id="scheme6">Scheme 6</button>
                 </div>
             </div>
+            <div class="row">    
+                <div class="col-xs-6 col-md-2 top-padding">
+                    <button class="btn btn-dark btn-block" style="padding:3vh" id="scheme7">Scheme 7</button>
+                </div>
+                <div class="col-xs-6 col-md-2 top-padding">
+                    <button class="btn btn-dark btn-block" style="padding:3vh" id="scheme8">Scheme 8</button>
+                </div>
+                <div class="col-xs-6 col-md-2 top-padding">
+                    <button class="btn btn-dark btn-block" style="padding:3vh" id="scheme9">Scheme 9</button>
+                </div>
+                <div class="col-xs-6 col-md-2 top-padding">
+                    <button class="btn btn-dark btn-block" style="padding:3vh" id="scheme10">Scheme 10</button>
+                </div>
+                <div class="col-xs-6 col-md-2 top-padding">
+                    <button class="btn btn-dark btn-block" style="padding:3vh" id="scheme11">Scheme 11</button>
+                </div>
+                <div class="col-xs-6 col-md-2 top-padding">
+                    <button class="btn btn-dark btn-block" style="padding:2vh" id="scheme12"><strong class="bigger-text">LOL</strong></button>
+                </div>
+            </div>
+            
         </div>
     </section>
 
@@ -477,22 +498,22 @@
     });
 
 
-function getFiles(){
-    console.log("getting files");
-    $.ajax({
-      url: "http://mkindustries.net/contracting/img/slideshow",
-      success: function(data){
-        console.log("sucess");
-         $(data).find("a:contains(.jpg)").each(function(){ 
-            console.log("Found a file: " + $(this).attr("href"));
-         });
-      },
-      nocontent: function(){console.log("nocontent")},
-      error: function(){console.log("1337 err0r")}
-    });
-}
+// function getFiles(){
+//     console.log("getting files");
+//     $.ajax({
+//       url: "http://mkindustries.net/contracting/img/slideshow",
+//       success: function(data){
+//         console.log("sucess");
+//          $(data).find("a:contains(.jpg)").each(function(){ 
+//             console.log("Found a file: " + $(this).attr("href"));
+//          });
+//       },
+//       nocontent: function(){console.log("nocontent")},
+//       error: function(){console.log("1337 err0r")}
+//     });
+// }
 
-getFiles();
+// getFiles();
 
     $(".header").backstretch([
       "img/slideshow/BittnerBedroom.jpg",
@@ -575,6 +596,53 @@ getFiles();
         $('.bg-primary').css( "color", "#CCC" );
 
         $('.bg-secondary').css( "background-color", "#2A2905" );
+        $('.bg-secondary').css( "color", "#CCC" );
+    });
+        $("#scheme7").on( "click", function() {
+        $('.bg-primary').css( "background-color", "#8FA693" );
+        $('.bg-primary').css( "color", "#666" );
+
+        $('.bg-secondary').css( "background-color", "#B7C4B9" );
+        $('.bg-secondary').css( "color", "#666" );
+    });
+    
+    $("#scheme8").on( "click", function() {
+        $('.bg-primary').css( "background-color", "#103D50" );
+        $('.bg-primary').css( "color", "#CCC" );
+
+        $('.bg-secondary').css( "background-color", "#467386" );
+        $('.bg-secondary').css( "color", "#CCC" );
+    });
+    
+    $("#scheme9").on( "click", function() {
+        $('.bg-primary').css( "background-color", "#688998" );
+        $('.bg-primary').css( "color", "#333" );
+
+        $('.bg-secondary').css( "background-color", "#93ABB5" );
+        $('.bg-secondary').css( "color", "#333" );
+    });
+    
+    $("#scheme10").on( "click", function() {
+        $('.bg-primary').css( "background-color", "#1F2B16" );
+        $('.bg-primary').css( "color", "#CCC" );
+
+        $('.bg-secondary').css( "background-color", "#525D4A");
+        $('.bg-secondary').css( "color", "#CCC" );
+    });
+    
+    $("#scheme11").on( "click", function() {
+        $('.bg-primary').css( "background-color", "#4A4A4A" );
+        $('.bg-primary').css( "color", "#CCC" );
+
+        $('.bg-secondary').css( "background-color", "#7D7D7D" );
+        $('.bg-secondary').css( "color", "#CCC" );
+    });
+    
+    $("#scheme12").on( "click", function() {
+        $('.bg-primary').css( "background-color", "#B90068" );
+        $('.bg-primary').css( "color", "#CCC" );
+
+        $('.bg-secondary').css( "background-color", "#FF8500" );
         $('.bg-secondary').css( "color", "#CCC" );
     });
     </script>
