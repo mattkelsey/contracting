@@ -482,6 +482,7 @@ function getFiles(){
     $.ajax({
       url: "http://mkindustries.net/contracting/img/slideshow",
       success: function(data){
+        console.log("sucess");
          $(data).find("td > a").each(function(){ 
             console.log("Found a file: " + $(this).attr("href"));
          });
