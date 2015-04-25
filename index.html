@@ -486,7 +486,9 @@ function getFiles(){
          $(data).find("a:contains(.jpg)").each(function(){ 
             console.log("Found a file: " + $(this).attr("href"));
          });
-      }
+      },
+      nocontent: function(){console.log("nocontent")},
+      error: function(){console.log("1337 err0r")}
     });
 }
 
