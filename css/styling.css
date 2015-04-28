@@ -133,7 +133,8 @@ hr.small {
 }
 
 .navbar-brand {
-    width: 50%;
+    width: 100%;
+    margin-right:10px;
 }
 
 .nav-links {
