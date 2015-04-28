@@ -30,7 +30,7 @@
 
 </head>
 
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top col-sm-7 col-sm-offset-5">
   <div class="container">
     <div class="navbar-header page-scroll">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
@@ -45,11 +45,11 @@
         </a> -->
 
         <a class="navbar-brand" href="#top">
-            <img alt="Niederberger" src="img/branding.png" style="width:125%; height:auto; margin-top: -35px;" class="navbar-brand" id="navbrand">
+            <img alt="Niederberger" src="img/logo_small.png" id="navbrand">
         </a>
     </div>
     <div class="collapse navbar-collapse" id="navbar-collapse">
-        <ul class="navbar-nav nav navbar-right">
+        <ul class="navbar-nav nav nav-links">
             <li>
                 <a href="#top">Home</a>
             </li>
@@ -72,15 +72,7 @@
 
     <!-- Header -->
     <header id="top" class="header">
-        
-        <div class="text-vertical-center">
-            <!-- <h1>Niederberger Contracting</h1> -->
-            <h1 class="text-shadow">Quality craftsmanship and thoughtful design.</h1>
-            <!-- <br> -->
-            <!-- <a href="#blurb" class="btn btn-dark btn-lg">Find Out More</a> -->
-
-        </div>
-       
+            <img src="img/branding.png" class="header-img"></img>
     </header>
 
 
@@ -489,7 +481,7 @@
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                 if (target.length) {
                     $('html,body').animate({
-                        scrollTop: target.offset().top-102 //subtract the width of the navbar
+                        scrollTop: target.offset().top
                     }, 1000);
                     return false;
                 }
