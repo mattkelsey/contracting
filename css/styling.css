@@ -19,11 +19,11 @@ body {
 
 .bg-primary {
   color: #CCC;
-  background-color: #103D50;
+  background-color: #091E09;
 }
 
 .bg-secondary {
-    background-color: #467386;
+    background-color: #233B23;
     color: #CCC;
 }
 
@@ -215,6 +215,8 @@ hr.small {
     margin-bottom: 30px;
 }
 
+
+
 /* Callout */
 
 .callout {
@@ -259,18 +261,6 @@ hr.small {
 
 .call-to-action .btn {
     margin: 10px;
-}
-
-/* Map */
-
-.map {
-    height: 500px;
-}
-
-@media(max-width:768px) {
-    .map {
-        height: 75%;
-    }
 }
 
 /* Contact */
