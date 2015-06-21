@@ -254,6 +254,10 @@ hr.small {
     height: 100%;
 }
 
+.row {
+    width: 100%;
+}
+
 .text-container {
     width: 75%;
     /*height: 100%;*/
