@@ -79,7 +79,7 @@
 
 <div id="links" class="container">
 
-    <div class="col-md-4 thumbnail-col">
+    <!-- <div class="col-md-4 thumbnail-col">
         <a href="img/logo.png" data-gallery>
             <img src="img/logo.png" class="thumbnails">
         </a>
@@ -127,7 +127,7 @@
         <a href="img/seth.jpg" data-gallery>
             <img src="img/logo.png" class="thumbnails">
         </a>
-    </div>
+    </div> -->
 </div>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -186,7 +186,7 @@
             //Lsit all png file names in the page
             $(data).find("a:contains(" + fileextension + ")").each(function () {
                 var filename = this.href.replace(window.location.host, "").replace("http:///", "");
-                $("body").append($("<div class='col-md-4 thumbnail-col'>
+                $("#links").append($("<div class='col-md-4 thumbnail-col'>
                                         <a href='"+ dir + filename +"' data-gallery>
                                             <img src='"+ dir + filename +"' class='thumbnails'>
                                         </a>
