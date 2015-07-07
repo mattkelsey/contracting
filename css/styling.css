@@ -265,11 +265,11 @@ hr.small {
 }
 
 .second-stories {
-    background-image: url(../img/slideshow/BittnerExterior1.jpg);
+    background-image: url(../img/steel1.jpg);
 }
 
 .kitchens {
-    background-image: url(../img/slideshow/BittnerDining1.jpg);
+    background-image: url(../img/steel2.jpg);
 }
 
 .bathrooms {
@@ -289,7 +289,7 @@ hr.small {
 }
 
 .magic {
-    background-image: url(../img/slideshow/BittnerFoyer.jpg);
+    background-image: url(../img/steel4.jpg);
 }
 
 /*.kitchens a {
