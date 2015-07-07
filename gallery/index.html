@@ -186,6 +186,7 @@
             //Lsit all png file names in the page
             $(data).find("a:contains(" + fileextension + ")").each(function () {
                 var filename = this.href.replace(window.location.host, "").replace("http:///", "");
+                console.log(dir + filename);
                 $("#links").append($("<img src="+ dir + filename +">"));
             });
         }
