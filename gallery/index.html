@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Niederberger Contracting</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/gallerystyling.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-image-gallery.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="bg-primary">
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <ul class="navbar-nav navbar-header nav">
+            <li>
+                <a href="http://mkindustries.net/contracting#portfolio" class=""><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>  Back to Main Page</a>
+            </li>
+        </ul>
+         
+    </div>
+</nav>
+
+<div id="blueimp-gallery" class="blueimp-gallery">
+    <!-- The container for the modal slides -->
+    <div class="slides"></div>
+    <!-- Controls for the borderless lightbox -->
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+    <!-- The modal dialog, which will be used to wrap the lightbox content -->
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body next"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left prev">
+                        <i class="glyphicon glyphicon-chevron-left"></i>
+                        Previous
+                    </button>
+                    <button type="button" class="btn btn-primary next">
+                        Next
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="links" class="container">
+
+    <!-- <div class="col-md-4 thumbnail-col">
+        <a href="img/logo.png" data-gallery>
+            <img src="img/logo.png" class="thumbnails">
+        </a>
+    </div>
+    <div class="col-md-4 thumbnail-col">
+        <a href="img/josh.jpg" data-gallery>
+            <img src="img/logo.png" class="thumbnails">
+        </a>
+    </div>
+    <div class="col-md-4 thumbnail-col">
+        <a href="img/seth.jpg" data-gallery>
+            <img src="img/logo.png" class="thumbnails">
+        </a>
+    </div>
+
+
+    <div class="col-md-4 thumbnail-col">
+        <a href="img/logo.png" data-gallery>
+            <img src="img/logo.png" class="thumbnails">
+        </a>
+    </div>
+    <div class="col-md-4 thumbnail-col">
+        <a href="img/josh.jpg" data-gallery>
+            <img src="img/logo.png" class="thumbnails">
+        </a>
+    </div>
+    <div class="col-md-4 thumbnail-col">
+        <a href="img/seth.jpg" data-gallery>
+            <img src="img/logo.png" class="thumbnails">
+        </a>
+    </div>
+
+
+    <div class="col-md-4 thumbnail-col">
+        <a href="img/logo.png" data-gallery>
+            <img src="img/logo.png" class="thumbnails">
+        </a>
+    </div>
+    <div class="col-md-4 thumbnail-col">
+        <a href="img/josh.jpg" data-gallery>
+            <img src="img/logo.png" class="thumbnails">
+        </a>
+    </div>
+    <div class="col-md-4 thumbnail-col">
+        <a href="img/seth.jpg" data-gallery>
+            <img src="img/logo.png" class="thumbnails">
+        </a>
+    </div> -->
+</div>
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Gallery Scripts -->
+    <script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+
+    <script>
+    //Image gallery setup
+    $('#blueimp-gallery').data('closeOnSlideClick', false);
+    $('#blueimp-gallery').data('toggleSlideshowOnSpace', false);
+
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    //Closes Nav when menu item is clicked
+    $('.navbar-collapse ul li a').click(function() {
+    $('.navbar-toggle:visible').click();
+    });
+
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top-102 //subtract the width of the navbar
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+
+    var dir = "img/";
+    var fileextension = ".jpg";
+    $.ajax({
+        //This will retrieve the contents of the folder if the folder is configured as 'browsable'
+        url: dir,
+        success: function (data) {
+            //Lsit all png file names in the page
+            $(data).find("a:contains(" + fileextension + ")").each(function () {
+                var filename = this.href.replace(window.location.host, "").replace("http:///", "");
+                $("#links").append($("<img src="+ dir + filename +">"));
+            });
+        }
+    });
+    //<div class='col-md-4 thumbnail-col'><a href="+ dir + filename +" data-gallery> imgstuff </a></div> in image tag class='thumbnails'
+    </script>
+
+</body>
+
+</html>
