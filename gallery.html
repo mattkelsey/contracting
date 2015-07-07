@@ -187,8 +187,8 @@
             $(data).find("a:contains(" + fileextension + ")").each(function () {
                 var filename = this.href.replace(window.location.host, "").replace("http:///", "");
                 $("#links").append($("<div class='col-md-4 thumbnail-col'>
-                                        <a href='"+ dir + filename +"' data-gallery>
-                                            <img src='"+ dir + filename +"' class='thumbnails'>
+                                        <a href="+ dir + filename +" data-gallery>
+                                            <img src="+ dir + filename +" class='thumbnails'>
                                         </a>
                                     </div>"));
             });
