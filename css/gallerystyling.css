@@ -161,8 +161,41 @@ hr.small {
     height: auto;
     margin-right: 50%;
     margin-left: auto;
+    /*box-shadow: 2px 2px 10px #000;*/
+    -webkit-transition: all 50ms ease-in;
+    -webkit-transform: scale(1);
+    -ms-transition: all 50ms ease-in;
+    -ms-transform: scale(1);
+    -moz-transition: all 50ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 50ms ease-in;
+    transform: scale(1);
+
+}
+
+.thumbnails:hover {
+    /*box-shadow: 0px 0px 50px #000000;*/
+    z-index: 2;
+    -webkit-transition: all 50ms ease-in;
+    -webkit-transform: scale(1.03);
+    -ms-transition: all 50ms ease-in;
+    -ms-transform: scale(1.03);
+    -moz-transition: all 50ms ease-in;
+    -moz-transform: scale(1.03);
+    transition: all 50ms ease-in;
+    transform: scale(1.03);
 }
 
 .thumbnail-col {
-    padding: 5%;
+
+    padding:5%;
+    max-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*padding-left: 5%;*/
+    /*padding-right: 5%;
+    padding-top:20%;*/
+    /*background-position: center center;
+    background-size: cover;*/
 }

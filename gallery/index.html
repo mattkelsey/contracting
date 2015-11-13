@@ -24,54 +24,55 @@
 
 </head>
 <body class="bg-primary">
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <ul class="navbar-nav navbar-header nav">
-            <li>
-                <a href="http://mkindustries.net/contracting#portfolio" class=""><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>  Back to Main Page</a>
-            </li>
-        </ul>
-         
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+          <ul class="navbar-nav navbar-header nav">
+              <li>
+                  <a href="http://niederbergercontracting.com/test/#services" class=""><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>  Back to Main Page</a>
+              </li>
+          </ul>
+
+      </div>
+    </nav>
+
+    <div id="blueimp-gallery" class="blueimp-gallery">
+      <!-- The container for the modal slides -->
+      <div class="slides"></div>
+      <!-- Controls for the borderless lightbox -->
+      <h3 class="title"></h3>
+      <a class="prev">‹</a>
+      <a class="next">›</a>
+      <a class="close">×</a>
+      <a class="play-pause"></a>
+      <ol class="indicator"></ol>
+      <!-- The modal dialog, which will be used to wrap the lightbox content -->
+      <div class="modal fade">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" aria-hidden="true">&times;</button>
+                      <h4 class="modal-title"></h4>
+                  </div>
+                  <div class="modal-body next"></div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-default pull-left prev">
+                          <i class="glyphicon glyphicon-chevron-left"></i>
+                          Previous
+                      </button>
+                      <button type="button" class="btn btn-primary next">
+                          Next
+                          <i class="glyphicon glyphicon-chevron-right"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
     </div>
-</nav>
 
-<div id="blueimp-gallery" class="blueimp-gallery">
-    <!-- The container for the modal slides -->
-    <div class="slides"></div>
-    <!-- Controls for the borderless lightbox -->
-    <h3 class="title"></h3>
-    <a class="prev">‹</a>
-    <a class="next">›</a>
-    <a class="close">×</a>
-    <a class="play-pause"></a>
-    <ol class="indicator"></ol>
-    <!-- The modal dialog, which will be used to wrap the lightbox content -->
-    <div class="modal fade">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title"></h4>
-                </div>
-                <div class="modal-body next"></div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default pull-left prev">
-                        <i class="glyphicon glyphicon-chevron-left"></i>
-                        Previous
-                    </button>
-                    <button type="button" class="btn btn-primary next">
-                        Next
-                        <i class="glyphicon glyphicon-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
+    <div id="links" class="container-fluid">
+
     </div>
-</div>
 
-<div id="links" class="container">
-
-</div>
     <script src="../js/jquery.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
@@ -115,21 +116,24 @@
         });
     });
 
-    var dir = "http://mkindustries.net/gallery/img";
+    var dir = "img";
     var fileextension = ".jpg";
     $.ajax({
         //This will retrieve the contents of the folder if the folder is configured as 'browsable'
         url: dir,
         success: function (data) {
             //Lsit all png file names in the page
+            console.log("success");
             $(data).find("a:contains(" + fileextension + ")").each(function () {
-                var filename = this.href.replace(window.location.host, "").replace("http:///", "");
-                console.log(dir + filename);
-                $("#links").append($("<img src="+ dir + filename +">"));
+                var filename = this.href.replace(window.location.host, "").replace("http:///", "").replace("test/gallery","");
+                //console.log(filename);
+                //console.log(dir + filename);
+                $("#links").append($("<div class='col-md-4 thumbnail-col'><a href="+ dir + filename +" data-gallery><img class = 'thumbnails' src="+ dir + filename +"></a></div>"));
             });
         }
     });
-    //<div class='col-md-4 thumbnail-col'><a href="+ dir + filename +" data-gallery> imgstuff </a></div> in image tag class='thumbnails'
+    //<div class='col-md-4 thumbnail-col'><a href="+ dir + filename +" data-gallery><img class = 'thumbnails' src="+ dir + filename +"></a></div> This is functional, however the image does not fill the div.
+    //"<a href="+ dir + filename +" data-gallery><div class='col-md-4 thumbnail-col' style='background-image: url(" + dir + filename + ")'></div></a>"
     </script>
 
 </body>
