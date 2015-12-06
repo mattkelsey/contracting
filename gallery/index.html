@@ -69,8 +69,32 @@
       </div>
     </div>
 
-    <div id="links" class="container-fluid">
+    <div id="additions" class="container-fluid">
+        <h2 class="lead title">Second Stories and Additions</h1>
+    </div>
 
+    <div id="kitchens" class="container-fluid">
+        <h2 class="lead title">Kitchens</h1>
+    </div>
+
+    <div id="bathrooms" class="container-fluid">
+        <h2 class="lead title">Bathrooms</h1>
+    </div>
+
+    <div id="decks" class="container-fluid">
+        <h2 class="lead title">Decks and Patios</h1>
+    </div>
+
+    <div id="custom" class="container-fluid">
+        <h2 class="lead title">Custom Homes</h1>
+    </div>
+
+    <div id="commercial" class="container-fluid">
+        <h2 class="lead title">Commercial and Tennant Improvement</h1>
+    </div>
+
+    <div id="special" class="container-fluid">
+        <h2 class="lead title">Unique Projects Requiring Art and Magic</h1>
     </div>
 
     <script src="../js/jquery.js"></script>
@@ -116,24 +140,34 @@
         });
     });
 
-    var dir = "img";
-    var fileextension = ".jpg";
-    $.ajax({
-        //This will retrieve the contents of the folder if the folder is configured as 'browsable'
-        url: dir,
-        success: function (data) {
-            //Lsit all png file names in the page
-            console.log("success");
-            $(data).find("a:contains(" + fileextension + ")").each(function () {
-                var filename = this.href.replace(window.location.host, "").replace("http:///", "").replace("test/gallery","");
-                //console.log(filename);
-                //console.log(dir + filename);
-                $("#links").append($("<div class='col-md-4 thumbnail-col'><a href="+ dir + filename +" data-gallery><img class = 'thumbnails' src="+ dir + filename +"></a></div>"));
-            });
-        }
-    });
-    //<div class='col-md-4 thumbnail-col'><a href="+ dir + filename +" data-gallery><img class = 'thumbnails' src="+ dir + filename +"></a></div> This is functional, however the image does not fill the div.
-    //"<a href="+ dir + filename +" data-gallery><div class='col-md-4 thumbnail-col' style='background-image: url(" + dir + filename + ")'></div></a>"
+
+    var services = ["additions", "kitchens", "bathrooms", "decks", "custom", "commercial", "special"];
+
+    for(i in services) {
+        loadImages(services[i]);
+    }
+
+    function loadImages(section) {
+        var dir = "img/" + section;
+        var fileextension = ".jpg";
+        $.ajax({
+            //This will retrieve the contents of the folder if the folder is configured as 'browsable'
+            url: dir,
+            success: function (data) {
+                //Lsit all png file names in the page
+                console.log("success");
+                $(data).find("a:contains(" + fileextension + ")").each(function () {
+                    var filename = this.href.replace(window.location.host, "").replace("http:///", "").replace("test/gallery","");
+                    //console.log(filename);
+                    //console.log(dir + filename);
+                    $("#" + section).append($("<div class='col-md-4 thumbnail-col'><a href="+ dir + filename +" data-gallery><img class = 'thumbnails' src="+ dir + filename +"></a></div>"));
+                });
+            }
+        });
+        //<div class='col-md-4 thumbnail-col'><a href="+ dir + filename +" data-gallery><img class = 'thumbnails' src="+ dir + filename +"></a></div> This is functional, however the image does not fill the div.
+        //"<a href="+ dir + filename +" data-gallery><div class='col-md-4 thumbnail-col' style='background-image: url(" + dir + filename + ")'></div></a>"
+    }
+
     </script>
 
 </body>
