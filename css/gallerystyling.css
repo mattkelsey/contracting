@@ -194,7 +194,8 @@ hr.small {
 .thumbnail-col {
 
     padding:5%;
-    max-height: 50vh;
+    height: 50vh;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;

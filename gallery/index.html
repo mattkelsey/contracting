@@ -124,28 +124,42 @@
     });
 
     // Scrolls to the selected menu item on the page
-    $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top-102 //subtract the width of the navbar
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-    });
+    //
+    //
+    //
+    // $(document).ready(function() {
+    //     window.scrollTo(500,0);
+    //     var split = window.location.href.split("/");
+    //     split = split[split.length-1];
+    //     if (split.indexOf("#") != -1) {
+    //         split = "#" + split.split("#")[1];
+    //         console.log(split);
+    //         // $("html, body").animate({
+    //         //      scrollTop: $(split).offset().top
+    //         //
+    //         //  }, 1000);
+    //     }
+    //     // if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+    //     //
+    //     //     var target = $(this.hash);
+    //     //     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    //     //     if (target.length) {
+    //     //         $('html,body').animate({
+    //     //             scrollTop: target.offset().top-102 //subtract the width of the navbar
+    //     //         }, 1000);
+    //     //         return false;
+    //     //     }
+    //     // }
+    // });
 
 
     var services = ["additions", "kitchens", "bathrooms", "decks", "custom", "commercial", "special"];
 
+
     for(i in services) {
         loadImages(services[i]);
     }
+
 
     function loadImages(section) {
         var dir = "img/" + section;
