@@ -358,7 +358,7 @@ For details, see http://www.apache.org/licenses/LICENSE-2.0. -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/backstretch.js"></script>
-
+    
     <script>
 
     //Closes Nav when menu item is clicked
@@ -386,9 +386,11 @@ For details, see http://www.apache.org/licenses/LICENSE-2.0. -->
         });
     });
 
-    $(".header").backstretch([
-      "img/slideshow/BittnerBedroom.jpg",
-      "img/slideshow/BittnerDining1.jpg",
+
+ 
+
+    $(".header").backstretch(
+    ["img/slideshow/BittnerDining1.jpg",
       "img/slideshow/BittnerUpstairshall.jpg",
       "img/slideshow/BittnerExterior1.jpg",
       "img/slideshow/BittnerBath.jpg",
@@ -428,21 +430,6 @@ For details, see http://www.apache.org/licenses/LICENSE-2.0. -->
         $('.bg-secondary').css( "background-color", "#5a5c51" );
         $('.bg-secondary').css( "color", "#CCC" );
     });
-
-
-    var toggle = false;
-    $("#hrtoggle").on( "click", function() {
-        if (toggle) {
-            $('.divider').css( "display", "none" );
-            console.log("off");
-        } else {
-            $('.divider').css( "display", "inherit" );
-            console.log("on");
-        }
-        toggle = !toggle;
-
-    });
-
     </script>
 
 </body>
