@@ -1,15 +1,15 @@
-Move exerpt to about section... change about us to quality craftsmanship and combine blurbs
+* Move exerpt to about section... change about us to quality craftsmanship and combine blurbs
 
-Kitchen >> Kitchen and Dining
+* Kitchen >> Kitchen and Dining
 
 Images with less space in gallery
 
 slideshow images updating
 
-thumbnail code
+thumbnail code (faster load times with small thumbnails for the gallery)
 
 bigger gallery titles
 
-gallery next/previous controls
+gallery next/previous controls on slideshow and in gallery
 
-
+text overflow bug in testimonials

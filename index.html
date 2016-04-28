@@ -92,31 +92,15 @@ For details, see http://www.apache.org/licenses/LICENSE-2.0. -->
             </div>
 
         </div>
-    </section>
-    <hr class="divider" /> -->
-
-    <section class="blurb bg-secondary" id="blurb">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Quality craftsmanship and thoughtful design.</h2>
-                    <p class="lead">As a Seattle general building contractor for over 20 years, Niederberger Contracting Ltd. brings experienced, reliable professionals to your residential remodeling, home building and commercial improvement projects. We provide top quality construction services — from solid in-house framing specialists to artisian woodworkers and tile designers who have worked with us for years.</p>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-
-    <hr class="divider" />
+    </section> -->
     <section class="about bg-primary" id="about">
             <div class="container-fluid text-center">
-                <h2>About Us</h2>
+                <h2>Quality craftsmanship and thoughtful design.</h2>
                 <hr class="small">
             </div>
 
             <div class="container-fluid text-center">
-                <p class="lead">Niederberger Contracting has earned a reputation for accountability and integrity by consistently exceeding customers' expectations. Our relationship with customers is based on open communication and respect for our agreements.</p>
+                <p class="lead">As a Seattle general building contractor for over 20 years, Niederberger Contracting Ltd. brings experienced, reliable professionals to your residential remodeling, home building and commercial improvement projects. We have earned a reputation for accountability and integrity by consistently exceeding customers' expectations. Our relationship with customers is based on open communication and respect for our agreements. We provide top quality construction services — from solid in-house framing specialists to artisian woodworkers and tile designers who have worked with us for years.</p>
             </div>
             <div class="container-fluid top-padding">
             <div class="col-lg-10 col-lg-offset-2 about-offset">
@@ -375,7 +359,6 @@ For details, see http://www.apache.org/licenses/LICENSE-2.0. -->
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                 if(target.selector!="#carousel") {
                     if (target.length) {
-                        console.log("target stuff:", target);
                         $('html,body').animate({
                             scrollTop: target.offset().top
                         }, 1000);
@@ -386,50 +369,37 @@ For details, see http://www.apache.org/licenses/LICENSE-2.0. -->
         });
     });
 
+   
+    function loadImages() {
+        var slideshowImages = [];
+        var slideshowIndex = 0;
+        var dir = "gallery/img/slideshow";
+        var fileextension = ".jpg";
+        $.ajax({
+            url: dir,
+            success: function (data) {
+                console.log("success");
+                $(data).find("a:contains(" + fileextension + ")").each(function () {
+                    var filename = this.href.replace(window.location.host, "").replace("http:///", "").replace("test/","");
+                    //console.log(filename);
+                    //console.log(dir + filename);
+                    console.log(filename);
+                    slideshowImages[slideshowIndex] = dir + "/" + filename;
+                    slideshowIndex++;
+                });
 
- 
+                $(".header").backstretch(slideshowImages, {duration: 5000, fade: 1000})
+    
+            }
+        });
+    
+    } 
 
-    $(".header").backstretch(
-    ["img/slideshow/BittnerDining1.jpg",
-      "img/slideshow/BittnerUpstairshall.jpg",
-      "img/slideshow/BittnerExterior1.jpg",
-      "img/slideshow/BittnerBath.jpg",
-      "img/slideshow/Bittnerdining2.jpg",
-      "img/slideshow/BittnerDining3.jpg",
-      "img/slideshow/BittnerExterior2.jpg",
-      "img/slideshow/BittnerFoyer.jpg"
+    loadImages();
+    
+   
 
-    ], {duration: 5000, fade: 1000});
-
-    // $("#scheme1").on( "click", function() {
-    //     $('.bg-primary').css( "background-color", "#104311" );
-    //     $('.bg-primary').css( "color", "#CCC" );
-
-    //     $('.bg-secondary').css( "background-color", "#555" );
-    //     $('.bg-secondary').css( "color", "#CCC" );
-    // });
-    $("#scheme13").on( "click", function() {
-        $('.bg-primary').css( "background-color", "#321A16" );
-        $('.bg-primary').css( "color", "#CCC" );
-        $('.divider').css( "display", "inherit" );
-        $('.bg-secondary').css( "background-color", "#321A16" );
-        $('.bg-secondary').css( "color", "#CCC" );
-    });
-    $("#scheme14").on( "click", function() {
-        $('.bg-primary').css( "background-color", "#2A2905" );
-        $('.bg-primary').css( "color", "#CCC" );
-        $('.divider').css( "display", "inherit" );
-        $('.bg-secondary').css( "background-color", "#2A2905" );
-        $('.bg-secondary').css( "color", "#CCC" );
-    });
-
-    $("#scheme15").on( "click", function() {
-        $('.bg-primary').css( "background-color", "#1d2120" );
-        $('.bg-primary').css( "color", "#CCC" );
-        $('.divider').css( "display", "none" );
-        $('.bg-secondary').css( "background-color", "#5a5c51" );
-        $('.bg-secondary').css( "color", "#CCC" );
-    });
+   
     </script>
 
 </body>
