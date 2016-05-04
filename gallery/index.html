@@ -24,111 +24,104 @@
 
 </head>
 <body class="bg-primary">
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-          <ul class="navbar-nav navbar-header nav">
-              <li>
-                  <a href="http://niederbergercontracting.com/test/#services" class=""><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>  Back to Main Page</a>
-              </li>
-          </ul>
 
-      </div>
-    </nav>
-
-    <div id="blueimp-gallery" class="blueimp-gallery">
-      <!-- The container for the modal slides -->
-      <div class="slides"></div>
-      <!-- Controls for the borderless lightbox -->
-      <h3 class="title"></h3>
-      <a class="prev">‹</a>
-      <a class="next">›</a>
-      <a class="close">×</a>
-      <a class="play-pause"></a>
-      <ol class="indicator"></ol>
-      <!-- The modal dialog, which will be used to wrap the lightbox content -->
-      <div class="modal fade">
-          <div class="modal-dialog">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <button type="button" class="close" aria-hidden="true">&times;</button>
-                      <h4 class="modal-title"></h4>
-                  </div>
-                  <div class="modal-body next"></div>
-                  <div class="modal-footer">
-                      <button type="button" class="btn btn-default pull-left prev">
-                          <i class="glyphicon glyphicon-chevron-left"></i>
-                          Previous
-                      </button>
-                      <button type="button" class="btn btn-primary next">
-                          Next
-                          <i class="glyphicon glyphicon-chevron-right"></i>
-                      </button>
-                  </div>
-              </div>
+  <div class="lg-col-12">
+    <img id="headerimg" src="../img/branding.png"></img>
+  </div> 
+  <div id="blueimp-gallery" class="blueimp-gallery">
+    <!-- The container for the modal slides -->
+    <div class="slides"></div>
+    <!-- Controls for the borderless lightbox -->
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+    <!-- The modal dialog, which will be used to wrap the lightbox content -->
+    <div class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" aria-hidden="true">&times;</button>
+            <h4 class="modal-title"></h4>
           </div>
+          <div class="modal-body next"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default pull-left prev">
+              <i class="glyphicon glyphicon-chevron-left"></i>
+              Previous
+            </button>
+            <button type="button" class="btn btn-primary next">
+              Next
+              <i class="glyphicon glyphicon-chevron-right"></i>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+  
+  <div id="additions" class="container-fluid">
+    <h2 class="lead title">Custom Homes, Second Stories and Additions</h1>
+</div>
 
-    <div id="additions" class="container-fluid">
-        <h2 class="lead title">Custom Homes, Second Stories and Additions</h1>
-    </div>
+<div id="kitchens" class="container-fluid">
+  <h2 class="lead title">Kitchen and Dining</h1>
+</div>
 
-    <div id="kitchens" class="container-fluid">
-        <h2 class="lead title">Kitchen and Dining</h1>
-    </div>
-
-    <div id="bathrooms" class="container-fluid">
+<div id="bathrooms" class="container-fluid">
         <h2 class="lead title">Bed and Bath</h1>
-    </div>
-    <div id="commercial" class="container-fluid">
-        <h2 class="lead title">Commercial and Tennant Improvement</h1>
-    </div>
+</div>
+<div id="commercial" class="container-fluid">
+  <h2 class="lead title">Commercial and Tennant Improvement</h1>
+</div>
 
     <div id="special" class="container-fluid">
-        <h2 class="lead title">Unique Projects Requiring Art and Magic</h1>
-    </div>
+      <h2 class="lead title">Unique Projects Requiring Art and Magic</h1>
+</div>
 
-    <script src="../js/jquery.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>
     <script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
-
+    
     <script>
-    //Image gallery setup
-    $('#blueimp-gallery').data('closeOnSlideClick', false);
-    $('#blueimp-gallery').data('toggleSlideshowOnSpace', false);
-
-    // Closes the sidebar menu
+      //Image gallery setup
+      $('#blueimp-gallery').data('closeOnSlideClick', false);
+      $('#blueimp-gallery').data('toggleSlideshowOnSpace', false);
+      
+      // Closes the sidebar menu
     $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
+      e.preventDefault();
+      $("#sidebar-wrapper").toggleClass("active");
+      });
+      
+      // Opens the sidebar menu
+      $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#sidebar-wrapper").toggleClass("active");
     });
+      
+      //Closes Nav when menu item is clicked
+      $('.navbar-collapse ul li a').click(function() {
+      $('.navbar-toggle:visible').click();
+      });
+      
+      var services = ["additions", "kitchens", "bathrooms", "commercial", "special"];
+      
 
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-
-    //Closes Nav when menu item is clicked
-    $('.navbar-collapse ul li a').click(function() {
-    $('.navbar-toggle:visible').click();
-    });
-
-    var services = ["additions", "kitchens", "bathrooms", "commercial", "special"];
-
-
-    for(i in services) {
-        loadImages(services[i]);
-    }
-
-
-    function loadImages(section) {
-        var dir = "img/" + section;
-        var fileextension = ".jpg";
-        $.ajax({
-            //This will retrieve the contents of the folder if the folder is configured as 'browsable'
-            url: dir,
-            success: function (data) {
+      for(i in services) {
+      loadImages(services[i]);
+      }
+      
+      
+      function loadImages(section) {
+      var dir = "img/" + section;
+      var fileextension = ".jpg";
+      $.ajax({
+      //This will retrieve the contents of the folder if the folder is configured as 'browsable'
+      url: dir,
+      success: function (data) {
                 //Lsit all png file names in the page
                 console.log("success");
                 $(data).find("a:contains(" + fileextension + ")").each(function () {
