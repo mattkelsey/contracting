@@ -60,39 +60,24 @@ For details, see http://www.apache.org/licenses/LICENSE-2.0. -->
   </div>
 </nav>
 
-    <header id="top" class="header">
+    <header id="top" class="header bg-primary">
             <img src="img/branding.png" class="header-img"></img>
             <!-- <a href="#blurb" class="btn hdr-btn page-scroll">
                 <i class="fa fa-angle-double-down animated"></i>
             </a> -->
     </header>
 
-<!--
-
     <section class="bg-primary" style="padding-bottom: 50px">
-        <div class="container-fluid">
             <div class="row text-center">
                 <p class="lead">Single Color Schemes</p>
                 <div class="col-xs-4 col-md-2 top-padding col-lg-offset-4">
-                    <button class="btn btn-dark btn-block" style="padding:3vh; margin-bottom: 1%;" id="scheme13">Scheme 13</button>
+                    <button class="btn btn-block" style="padding:3vh; margin-bottom: 1%; color: #000; background-color: #999" id="dark">Dark</button>
                 </div>
                 <div class="col-xs-4 col-md-2 top-padding">
-                    <button class="btn btn-dark btn-block" style="padding:3vh; margin-bottom: 1%;" id="scheme14">Scheme 14</button>
+                    <button class="btn btn-block" style="padding:3vh; margin-bottom: 1%; color: #000; background-color: #999" id="light">Light</button>
                 </div>
-                <div class="col-xs-4 col-md-2 top-padding">
-                    <button class="btn btn-dark btn-block" style="padding:3vh; margin-bottom: 1%;" id="scheme15">Scheme 15</button>
-                </div>
-
             </div>
-            <input type='text' id="flat" />
-            <input type='text' id="flat2" />
-
-            <div class="col-xs-4 col-md-2 top-padding">
-                <input type='button' class = "btn btn-dark btn-block" id="hrtoggle" value="Toggle Dividers"/>
-            </div>
-
-        </div>
-    </section> -->
+    </section>
     <section class="about bg-primary" id="about">
             <div class="container-fluid text-center">
                 <h2>Quality craftsmanship and thoughtful design.</h2>
@@ -328,6 +313,23 @@ For details, see http://www.apache.org/licenses/LICENSE-2.0. -->
     <script src="js/backstretch.js"></script>
     
     <script>
+    $("#dark").on( "click", function() {
+        $('.bg-primary').css( "background-color", "#1d2120" );
+        $('.bg-primary').css( "color", "#EEE" );
+        $('.bg-secondary').css( "background-color", "#1d2120" );
+        $('.bg-secondary').css( "color", "#EEE" );
+        $('.contact-icon').css( "color", "#eee" ).css( "fill", "#eee" );
+    });
+    
+    $("#light").on( "click", function() {
+        $('.bg-primary').css( "background-color", "#EEE" );
+        $('.bg-primary').css( "color", "#1d2120" );
+        $('.bg-secondary').css( "background-color", "#EEE" );
+        $('.bg-secondary').css( "color", "#1d2120" );
+
+        $('.contact-icon').css( "color", "#1d2120" );
+        $('.contact-icon').css( "fill", "#1d2120" );
+    });
 
     //Closes Nav when menu item is clicked
     $('.navbar-collapse ul li a').click(function() {
