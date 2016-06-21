@@ -84,37 +84,37 @@
 <script src="../js/jquery.js"></script>
 <script src="../js/bootstrap.min.js"></script>
     <script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
-    
+
     <script>
       //Image gallery setup
       $('#blueimp-gallery').data('closeOnSlideClick', false);
       $('#blueimp-gallery').data('toggleSlideshowOnSpace', false);
-      
+
       // Closes the sidebar menu
     $("#menu-close").click(function(e) {
       e.preventDefault();
       $("#sidebar-wrapper").toggleClass("active");
       });
-      
+
       // Opens the sidebar menu
       $("#menu-toggle").click(function(e) {
       e.preventDefault();
       $("#sidebar-wrapper").toggleClass("active");
     });
-      
+
       //Closes Nav when menu item is clicked
       $('.navbar-collapse ul li a').click(function() {
       $('.navbar-toggle:visible').click();
       });
-      
+
       var services = ["additions", "kitchens", "bathrooms", "commercial", "special"];
-      
+
 
       for(i in services) {
       loadImages(services[i]);
       }
-      
-      
+
+
       function loadImages(section) {
       var dir = "img/" + section;
       var fileextension = ".jpg";
