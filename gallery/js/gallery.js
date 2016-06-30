@@ -32,7 +32,7 @@ function loadImages(section) {
         //This will retrieve the contents of the folder if the folder is configured as 'browsable'
         url: dir,
         success: function (data) {
-            //Lsit all png file names in the page
+            //List all png file names in the page
             console.log("success");
             $(data).find("a:contains(" + fileextension + ")").each(function () {
                 var filename = this.href.replace(window.location.host, "").replace("http:///", "").replace("test/gallery","");
