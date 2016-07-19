@@ -5,22 +5,23 @@ Start Bootstrap - Stylish Portfolio Bootstrap Theme (http://startbootstrap.com)
 Code licensed under the Apache License v2.0.
 For details, see http://www.apache.org/licenses/LICENSE-2.0. -->
 <head>
+  <script src="https://use.typekit.net/kdi4rlo.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Niederberger Contracting</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styling.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <title>Niederberger Contracting</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styling.css" rel="stylesheet">
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
 </head>
 <body>
 
@@ -66,18 +67,6 @@ For details, see http://www.apache.org/licenses/LICENSE-2.0. -->
                 <i class="fa fa-angle-double-down animated"></i>
             </a> -->
     </header>
-
-    <section class="bg-primary" style="padding-bottom: 50px">
-            <div class="row text-center">
-                <p class="lead">Single Color Schemes</p>
-                <div class="col-xs-4 col-md-2 top-padding col-lg-offset-4">
-                    <button class="btn btn-block" style="padding:3vh; margin-bottom: 1%; color: #000; background-color: #999" id="dark">Dark</button>
-                </div>
-                <div class="col-xs-4 col-md-2 top-padding">
-                    <button class="btn btn-block" style="padding:3vh; margin-bottom: 1%; color: #000; background-color: #999" id="light">Light</button>
-                </div>
-            </div>
-    </section>
     <section class="about bg-primary" id="about">
             <div class="container-fluid text-center">
                 <h2>Quality craftsmanship and thoughtful design.</h2>
@@ -276,34 +265,15 @@ For details, see http://www.apache.org/licenses/LICENSE-2.0. -->
           <span class="sr-only">Next</span>
         </a>
       </div>
-      
     </section>
- 
 
-    
+
+
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/backstretch.js"></script>
-    
+
     <script>
-    $("#dark").on( "click", function() {
-        $('.bg-primary').css( "background-color", "#1d2120" );
-        $('.bg-primary').css( "color", "#EEE" );
-        $('.bg-secondary').css( "background-color", "#1d2120" );
-        $('.bg-secondary').css( "color", "#EEE" );
-        $('.contact-icon').css( "color", "#eee" ).css( "fill", "#eee" );
-    });
-    
-    $("#light").on( "click", function() {
-        $('.bg-primary').css( "background-color", "#EEE" );
-        $('.bg-primary').css( "color", "#1d2120" );
-        $('.bg-secondary').css( "background-color", "#EEE" );
-        $('.bg-secondary').css( "color", "#1d2120" );
-
-        $('.contact-icon').css( "color", "#1d2120" );
-        $('.contact-icon').css( "fill", "#1d2120" );
-    });
-
     //Closes Nav when menu item is clicked
     $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();

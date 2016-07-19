@@ -12,20 +12,22 @@ body {
     height: 100%;
 }
 
+a, a:hover, a:active, a:focus {
+    outline: none;
+}
+
 .bigger-text {
     font-size: 24px;
 }
 
 
 .bg-primary {
-  /*color: #CCC;*/
   color: #EEE;
   background-color: #1d2120;
 }
 
 .bg-secondary {
-    background-color: #5a5c51;
-    /*color: #CCC;*/
+    background-color: #1d2120;
     color: #EEE;
 }
 
@@ -36,7 +38,11 @@ body {
 
 body {
     /* font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif; */
-    font-family: "acumin-pro",sans-serif;
+    font-family: "acumin-pro", "Source Sans Pro", "Helvetica Neue", sans-serif;
+}
+
+.lead {
+    /* font-weight: 400; */
 }
 
 .text-vertical-center {
@@ -176,7 +182,7 @@ hr.small {
 }
 
 .nav-links {
-    margin-left:-40px;
+    margin-left:-10px;
 }
 
 #navbrand {

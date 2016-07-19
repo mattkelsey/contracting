@@ -21,14 +21,28 @@ body {
     }
 }
 
-a {
+a,
+a:hover,
+a:active,
+a:focus {
     outline: none;
+    color: #eee;
+    text-decoration: none;
+}
+
+.return-container {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    color: #eee;
+    font-size: 26px;
+    z-index: 10;
 }
 
 .title {
     margin: 50px;
     font-size: 2em;
-    font-weight: bold;
+    font-weight: 500;
     
 }
 
@@ -53,7 +67,7 @@ a {
 }
 
 body {
-    font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "acumin-pro", "Source Sans Pro", "Helvetica Neue", sans-serif;
     padding-top:50px;
 }
 
