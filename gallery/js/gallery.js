@@ -40,7 +40,7 @@ function loadImages(section) {
             //List all png file names in the page
             console.log("success");
             $(data).find("a:contains(" + fileextension + ")").each(function () {
-                var filename = this.href.replace(window.location.host, "").replace("http:///", "").replace("gallery","");
+                var filename = this.href.replace(window.location.host, "").replace("http:///", "").replace("test/gallery","");
                 //console.log(filename);
                 //console.log(dir + filename);
                 $("#" + section).append($("<div class='col-md-4 thumbnail-col'><a href="+ dir + filename +" data-gallery><img class = 'thumbnails' src="+ dir + filename +"></a></div>"));

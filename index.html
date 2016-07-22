@@ -267,9 +267,7 @@ For details, see http://www.apache.org/licenses/LICENSE-2.0. -->
       </div>
     </section>
 
-
-
-    <script src="js/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script> 
     <script src="js/bootstrap.min.js"></script>
     <script src="js/backstretch.js"></script>
 
@@ -309,7 +307,7 @@ For details, see http://www.apache.org/licenses/LICENSE-2.0. -->
             success: function (data) {
                 console.log("success");
                 $(data).find("a:contains(" + fileextension + ")").each(function () {
-                    var filename = this.href.replace(window.location.host, "").replace("http:///", "");
+                    var filename = this.href.replace(window.location.host, "").replace("http:///", "").replace("test/","");
                     //console.log(filename);
                     //console.log(dir + filename);
                     console.log(filename);
