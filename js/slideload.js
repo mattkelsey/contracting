@@ -8,7 +8,7 @@ function slideLoad() {
             var location = 0;
             $(data).find("a:contains(" + fileextension + ")").each(
                 function() {
-                    nameArray[location] = this.href.replace(window.location.host, "").replace ("http:///", "").replace("test/", "");
+                    nameArray[location] = this.href.replace(window.location.host, "").replace("http:///", "");
                     location++;
 
                 }

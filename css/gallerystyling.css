@@ -194,7 +194,6 @@ hr.small {
     -moz-transform: scale(1);
     transition: all 50ms ease-in;
     transform: scale(1);
-
 }
 
 .thumbnails:hover {

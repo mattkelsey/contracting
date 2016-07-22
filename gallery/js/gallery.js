@@ -19,12 +19,10 @@ $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
 
-var pos;
-
-$(function() {
-    var split = window.location.href.split("#");
-    pos = split[split.length-1];
-});
+setTimeout(function(){
+    console.log("loadedasdasd");
+    $('body').animate({ scrollTop: 100 }, 1000)
+}, 3000);
 
 var services = ["additions", "kitchens", "bathrooms", "commercial", "special"];
 
@@ -42,15 +40,11 @@ function loadImages(section) {
             //List all png file names in the page
             console.log("success");
             $(data).find("a:contains(" + fileextension + ")").each(function () {
-                var filename = this.href.replace(window.location.host, "").replace("http:///", "").replace("test/gallery","");
+                var filename = this.href.replace(window.location.host, "").replace("http:///", "").replace("gallery","");
                 //console.log(filename);
                 //console.log(dir + filename);
                 $("#" + section).append($("<div class='col-md-4 thumbnail-col'><a href="+ dir + filename +" data-gallery><img class = 'thumbnails' src="+ dir + filename +"></a></div>"));
             });
-            $('html,body').animate({
-                scrollTop: $("#" + pos)
-            }, 1000);
-
         }
     });
     //<div class='col-md-4 thumbnail-col'><a href="+ dir + filename +" data-gallery><img class = 'thumbnails' src="+ dir + filename +"></a></div> This is functional, however the image does not fill the div.
